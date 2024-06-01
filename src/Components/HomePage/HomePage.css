@@ -7,7 +7,7 @@
     align-items: flex-start;
     justify-content: center;
     user-select: none;
-    animation-duration: 6s;
+    animation-duration: 3s;
     animation-name: text;
     h3 {
       font-size: 20px;
@@ -33,9 +33,6 @@
 @keyframes text{
     from{
         transform: translateX(-1000px);
-    }
-    50%{
-        transform: translateX(20px);
     }
     to{
         transform: translateX(0px);
