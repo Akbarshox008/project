@@ -1,0 +1,130 @@
+@import url(./Components/HomePage/HomePage.css);
+html{
+  font-size: 82.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+  width: .8rem;
+}
+html::-webkit-scrollbar-track{
+ background:#343434 ;
+ padding: 2px;
+}
+html::-webkit-scrollbar-thumb{
+background: transparent;
+border: 3px solid #07117c;
+border-radius: 4px;
+cursor:grab;
+
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.home {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./Components/HomePage/Icons/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.btn{
+    padding: 10px 40px;
+    font-size: 17px;
+    font-weight: 700;
+    background: #0193DC;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    &:hover{
+      background: blue;
+      transition: 1.5s;
+    }
+  
+    &:active{
+      transform: translateY(2px);
+      transition: .3s;
+    }
+}
+.container {
+  max-width: 1400px;
+  height: max-content;
+  background: transparent;
+  margin: auto;
+  padding: 0;
+
+  .navbar{
+    padding: 10px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .logo {
+      margin-left: 20px;
+      cursor: pointer;
+      transition: 3s ;
+      animation-duration: 3s;
+      animation-name: logo;
+      &:active{
+        transform: translateY(2px);
+        transition: .24s;
+      }
+    }
+    .list {
+      display: flex;
+      gap: 60px;
+      margin-right: 50px;
+      animation-duration: 3s;
+      animation-name: logo;
+        
+      a {
+        text-decoration: none;
+        position: relative;
+        padding-bottom: 7px;
+        font-size: 17px;
+        font-weight: 700;
+        color: #cecdcd;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 25%;
+          bottom: 0;
+          width: 25px;
+          height: 1.4px;
+          background-color: rgb(252, 252, 252);
+          transform: scale(0);
+          transition: 1s;
+        }
+        &:hover {
+            color: #fff;
+            &::after{
+                transform: scale(1);
+            }
+        }
+        &:active{
+            transition: 0.2s;
+            transform: translateY(2px);
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes logo{
+    from{
+        transform: translateY(-100px);
+    }
+    50%{
+        transform: translateY(50px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}

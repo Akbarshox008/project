@@ -1,0 +1,43 @@
+.container {
+  .box {
+    padding: 15px;
+    height: 63vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    user-select: none;
+    animation-duration: 6s;
+    animation-name: text;
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 18px;
+      text-align: left;
+      color: #b6b6b6;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: 35px;
+      width: 65%;
+      line-height: 70px;
+      color: #fff;
+      margin-bottom: 90px;
+    }
+  }
+}
+
+
+
+@keyframes text{
+    from{
+        transform: translateX(-1000px);
+    }
+    50%{
+        transform: translateX(20px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
